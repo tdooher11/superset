@@ -22,10 +22,18 @@ cd superset/
 git pull origin master
 ```
 
-Then, restart the containers and any changed Docker images will be automatically pulled down:
+Then, pull the latest docker images and start the containers:
 
 ```bash
+docker-compose pull
 docker-compose up
+```
+
+Or if using non-dev:
+
+```bash
+docker-compose -f docker-compose-non-dev.yml pull
+docker-compose -f docker-compose-non-dev.yml up -d
 ```
 
 ### Updating Superset Manually
